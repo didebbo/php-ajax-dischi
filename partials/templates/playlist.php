@@ -5,7 +5,7 @@
             <div class="col">
                 <div class="item">
                     <div class="poster">
-                        <img src="#" alt="">
+                        <img src="<?= $item["poster"]; ?>" alt="">
                     </div>
                     <div class="title">
                         <?= $item["title"]; ?>
