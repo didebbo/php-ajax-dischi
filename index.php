@@ -16,7 +16,7 @@ require_once __DIR__ . "/partials/database.php";
 <body>
     <?php require_once __DIR__ . "/partials/templates/header.php"; ?>
     <main>
-        <!-- <?php require_once __DIR__ . "/partials/templates/playlist.php"; ?> -->
+        <?php require_once __DIR__ . "/partials/templates/playlist.php"; ?>
     </main>
 </body>
 
