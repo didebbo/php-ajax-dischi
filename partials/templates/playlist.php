@@ -8,14 +8,14 @@
                         <img src="#" alt="">
                     </div>
                     <div class="title">
-                        Title Here
+                        <?= $item["title"]; ?>
                     </div>
                     <div class="desc">
                         <div class="author">
-                            Author Here
+                            <?= $item["author"]; ?>
                         </div>
                         <div class="yera">
-                            1993
+                            <?= $item["year"]; ?>
                         </div>
                     </div>
                 </div>
