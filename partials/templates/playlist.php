@@ -14,7 +14,7 @@
                         <div class="author">
                             <?= $item["author"]; ?>
                         </div>
-                        <div class="yera">
+                        <div class="year">
                             <?= $item["year"]; ?>
                         </div>
                     </div>

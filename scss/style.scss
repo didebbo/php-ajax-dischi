@@ -23,7 +23,7 @@ body {
 .playlist {
     display: flex;
     .row {
-        border: 0.2em solid red;
+        // border: 0.2em solid red;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
@@ -35,6 +35,13 @@ body {
                 padding: 1em;
                 display: flex;
                 flex-direction: column;
+                background-color: #2e3a46;
+                align-items: center;
+                text-align: center;
+                > * {
+                    // border: 0.2em solid red;
+                    margin: 0.2em 0;
+                }
                 .poster {
                     display: flex;
                     img {
@@ -42,6 +49,29 @@ body {
                         height: 10em;
                         object-fit: cover;
                     }
+                }
+                .title {
+                    font-size: 0.9em;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+                .desc {
+                    display: flex;
+                    flex-direction: column;
+                    color: rgba($color: #ffffff, $alpha: 0.6);
+                    > * {
+                        margin: 0.2em 0;
+                    }
+                    .author,.year {
+                        margin: 0.5em 0;
+                    }
+                    .author {
+                        font-size: 0.8em;
+                    }
+                    .year {
+                        font-size: 0.75em;
+                    }
+                    
                 }
             }
         }
