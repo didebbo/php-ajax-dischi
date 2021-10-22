@@ -7,10 +7,19 @@
 header {
     background-color: #2e3a46;
     padding: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     .logo {
         height: 2.5em;
         img {
             height: 100%;
+        }
+    }
+    .actions {
+        select {
+            display: inline-block;
+            padding: 0.2em;
         }
     }
 }
@@ -32,6 +41,7 @@ a {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         .col {
             width: (100% / 5);
             padding: 2em;

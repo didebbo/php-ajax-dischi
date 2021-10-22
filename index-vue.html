@@ -18,6 +18,15 @@
                     <img :src="`images/${logoSrc}`" alt="Spotify FullStack">
                 </a>
             </div>
+            <div class="actions">
+                <div class="filterByGender">
+                    <select name="gender" v-model="genre" @change="onGenderFilterChanged(genre)">
+                        <option value="all">All</option>
+                        <option v-for="(genre,index) in database.genres" :key="index" :value="genre.toLowerCase()">
+                            {{genre}}</option>
+                    </select>
+                </div>
+            </div>
         </header>
         <main>
             <div class="playlist">

@@ -2,13 +2,15 @@ const app = new Vue({
     el: "#App",
     data: {
         logoSrc: "spotify-logo.png",
+        genre: "all",
         database: {
             tracks: {},
             genres: [],
         }
     },
     created() {
-        this.getTracks("all");
+        this.getGenres();
+        this.getTracks(this.genre);
     },
     methods: {
         getTracks(genre) {
@@ -19,6 +21,15 @@ const app = new Vue({
             }).then((res) => {
                 this.database.tracks = res.data;
             });
+        },
+        getGenres() {
+            axios.get("http://localhost/php-ajax-dischi/apis/genres.php")
+                .then((res) => {
+                    this.database.genres = res.data;
+                });
+        },
+        onGenderFilterChanged(genre) {
+            this.getTracks(genre);
         }
     }
 });
