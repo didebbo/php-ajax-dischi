@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Spotify FullStack</title>
+</head>
+
+<body>
+    <div id="App">
+        <header>
+            <div class="logo">
+                <a href="http://localhost/php-ajax-dischi/index-vue.html">
+                    <img :src="`images/${logoSrc}`" alt="Spotify FullStack">
+                </a>
+            </div>
+        </header>
+        <main>
+            <div class="playlist">
+                <div class="row">
+                    <div v-for="(track,index) in database.tracks" :key="index" class="col">
+                        <a href="#">
+                            <div class="item">
+                                <div class="poster">
+                                    <img :src="track.poster" :alt="track.title">
+                                </div>
+                                <div class="title">
+                                    {{track.title}}
+                                </div>
+                                <div class="desc">
+                                    <div class="author">
+                                        {{track.author}}
+                                    </div>
+                                    <div class="year">
+                                        {{track.year}}
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <?php endforeach ?>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
